@@ -1,0 +1,12 @@
+*~
+*.elc
+/emacs.d/.emacs.desktop*
+/emacs.d/.emacs.places
+/emacs.d/abbrev_defs
+/emacs.d/ac-comphist.dat
+/emacs.d/bookmarks
+/emacs.d/derek/custom.el
+/emacs.d/elpa
+/emacs.d/places
+/emacs.d/recentf
+/emacs.d/url/cookies

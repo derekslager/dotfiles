@@ -24,6 +24,12 @@
 	   (append '(("[ ]*\\(\\([_a-zA-Z]:\\)?[^:(\t\n]+\\)(\\([0-9]+\\)[,]\\([0-9]+\\)) : \\(error\\|warning\\)  : CA[0-9]+ : " 1 3 4))
 		   compilation-error-regexp-alist))))
 
+(let ((csharp-mode-snippets "~/dev/csharp-mode-snippets"))
+  (add-to-list 'load-path csharp-mode-snippets)
+  (require 'csharp-mode-snippets-support)
+  (add-to-list 'yas-snippet-dirs csharp-mode-snippets)
+  (yas-reload-all))
+
 (defun csharp-replace-double-quotes-with-string-empty (arg)
   (interactive "*P")
   (self-insert-command (prefix-numeric-value arg))

@@ -8,5 +8,5 @@
          '("package" "theme" "global" "bindings" "ido" "smex" ;base
            "functions" "programming" "insert"		      ;misc
            "erc" "org"					      ;tools
-           "csharp" "java" "javascript" "css" "clojure" "hg" "yasnippet")) ;programming
+           "yasnippet" "csharp" "java" "javascript" "css" "clojure" "hg")) ;programming
   (load (concat uid "/" library)))

@@ -77,4 +77,7 @@
     (setq ns-alternate-modifier 'meta
 	  ns-command-modifier 'meta)
   ;; remove menu bar in non-mac os x
-  (menu-bar-mode -1))
+  (menu-bar-mode -1)
+  ;; w32
+  (when (string-equal system-type "windows-nt")
+    (load (concat uid "/w32"))))

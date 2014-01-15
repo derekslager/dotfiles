@@ -36,6 +36,8 @@
 ;; save state on exit
 (desktop-save-mode 1)
 (setq desktop-globals-to-save '(desktop-missing-file-warning search-ring regexp-search-ring register-alist file-name-history))
+;; save desktop periodically
+(run-with-timer (* 60 60) (* 30 60) 'desktop-save (car desktop-path))
 
 ;; can't hack lisp without it
 (show-paren-mode t)

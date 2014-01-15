@@ -83,3 +83,5 @@
   ;; w32
   (when (string-equal system-type "windows-nt")
     (load (concat uid "/w32"))))
+
+(server-start)

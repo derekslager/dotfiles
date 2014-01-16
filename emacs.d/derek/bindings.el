@@ -42,6 +42,16 @@
 ;; imenu is useful if it can be invoked quickly
 (global-set-key [(control shift ?o)] 'imenu)
 
+(when (package-installed-p 'key-chord)
+  (require 'key-chord)
+  (key-chord-mode 1)
+  (key-chord-define-global "xo" 'other-window)
+  (key-chord-define-global "wp" 'windmove-up)
+  (key-chord-define-global "wn" 'windmove-down)
+  (key-chord-define-global "wb" 'windmove-left)
+  (key-chord-define-global "wf" 'windmove-right)
+  (setq key-chord-two-keys-delay 0.025))
+
 ;; Enable C-o to launch occur while in an isearch, amazingly handy.
 (define-key isearch-mode-map (kbd "C-o")
   (lambda ()

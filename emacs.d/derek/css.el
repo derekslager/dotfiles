@@ -3,8 +3,9 @@
     (cons '("\\.css$" . css-mode) auto-mode-alist))
 
 (defun on-css-loaded ()
-  (require 'rainbow-mode)
-  (rainbow-turn-on))
+  (when (package-installed-p 'rainbow-mode)
+    (require 'rainbow-mode)
+    (rainbow-turn-on)))
 
 (add-hook 'css-mode-hook 'on-css-loaded)
 

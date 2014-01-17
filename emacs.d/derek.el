@@ -13,5 +13,7 @@
 
 ;; assume files in the private directory are order-independent, and
 ;; load them all
-(dolist (library (directory-files (concat elisp-root "/private" ) nil "\\.el$"))
-  (load (concat uid "/private/" (file-name-sans-extension library))))
+(let ((private-root (concat elisp-root "/private" )))
+  (when (file-exists-p private-root)
+    (dolist (library (directory-files private-root nil "\\.el$"))
+      (load (concat uid "/private/" (file-name-sans-extension library))))))

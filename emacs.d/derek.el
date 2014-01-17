@@ -5,10 +5,10 @@
 (load custom-file 'noerror)
 
 (dolist (library
-         '("package" "theme" "global" "bindings" "ido" "smex" ;base
-           "functions" "programming" "insert"		      ;misc
-           "erc" "org"					      ;tools
-           "yasnippet" "csharp" "java" "javascript" "css" "clojure" "hg")) ;programming
+         '("package" "theme" "bling" "global" "bindings" "ido" "smex"
+           "functions" "programming" "insert"
+           "erc" "org"
+           "yasnippet" "csharp" "java" "javascript" "css" "clojure" "hg"))
   (load (concat uid "/" library)))
 
 ;; assume files in the private directory are order-independent, and

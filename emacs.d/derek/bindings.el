@@ -27,6 +27,12 @@
 (global-set-key [(shift left)] 'backward-char)
 (global-set-key [(shift right)] 'forward-char)
 
+;; windmove
+(global-set-key [(control left)] 'windmove-left)
+(global-set-key [(control right)] 'windmove-right)
+(global-set-key [(control up)] 'windmove-up)
+(global-set-key [(control down)] 'windmove-down)
+
 (global-set-key [(control meta ?\;)] 'comment-region)
 
 ;; Let Natural Keyboard 4000's Zoom buttons cycle buffers.
@@ -46,6 +52,7 @@
   (require 'key-chord)
   (key-chord-mode 1)
   (key-chord-define-global "xo" 'other-window)
+  (key-chord-define-global "xb" 'ido-switch-buffer)
   (key-chord-define-global "wp" 'windmove-up)
   (key-chord-define-global "wn" 'windmove-down)
   (key-chord-define-global "wb" 'windmove-left)

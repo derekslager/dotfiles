@@ -1,5 +1,5 @@
 ;; if you can only set one variable, set this one
-(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 
 ;; go. away.
 (tool-bar-mode -1)

@@ -56,7 +56,7 @@
 (setq dabbrev-case-fold-search nil)
 
 ;; misc useful settings
-(setq case-fold-search t)
+(setq-default case-fold-search t)
 (setq enable-recursive-minibuffers t)
 
 ;; live dangerously

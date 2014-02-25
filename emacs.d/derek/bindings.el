@@ -55,6 +55,8 @@
   (key-chord-define-global "xb" 'ido-switch-buffer)
   (key-chord-define-global "x0" 'delete-window)
   (key-chord-define-global "x9" 'delete-other-windows)
+  (key-chord-define-global "x-" 'split-window-below)
+  (key-chord-define-global "x\\" 'split-window-right)
   (key-chord-define-global "wp" 'windmove-up)
   (key-chord-define-global "wn" 'windmove-down)
   (key-chord-define-global "wb" 'windmove-left)

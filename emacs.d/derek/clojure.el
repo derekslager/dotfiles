@@ -3,15 +3,10 @@
   (paredit-mode t))
 
 (eval-after-load "clojure-mode"
-  '(when (package-installed-p 'ac-nrepl)
-     (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
-     (add-hook 'cider-mode-hook 'ac-nrepl-setup)))
+  '(when (package-installed-p 'ac-cider-compliment)
+     (add-hook 'cider-mode-hook 'ac-cider-compliment-setup)))
 
 (eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-repl-mode))
-
-;; (add-hook 'nrepl-interaction-mode-hook 'my-nrepl-mode-setup)
-;; (defun my-nrepl-mode-setup ()
-;;   (require 'nrepl-ritz))
+  '(add-to-list 'ac-modes 'cider-mode))
 
 (add-hook 'clojure-mode-hook 'on-clojure-mode)

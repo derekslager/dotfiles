@@ -69,7 +69,7 @@
   (setq ac-trigger-key "TAB")
   (ac-config-default))
 
-;; start of find-file in a convenient place
+;; start off find-file in a convenient place
 (cd (expand-file-name "~"))
 
 ;; system specific customizations

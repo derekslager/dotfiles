@@ -57,10 +57,6 @@
   (key-chord-define-global "x9" 'delete-other-windows)
   (key-chord-define-global "x-" 'split-window-below)
   (key-chord-define-global "x\\" 'split-window-right)
-  (key-chord-define-global "wp" 'windmove-up)
-  (key-chord-define-global "wn" 'windmove-down)
-  (key-chord-define-global "wb" 'windmove-left)
-  (key-chord-define-global "wf" 'windmove-right)
   (setq key-chord-two-keys-delay 0.025))
 
 ;; Enable C-o to launch occur while in an isearch, amazingly handy.

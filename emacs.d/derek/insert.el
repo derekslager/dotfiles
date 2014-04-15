@@ -1,6 +1,6 @@
 (auto-insert-mode)
 
-(setq auto-insert-directory "~/emacs.d/insert")
+(setq auto-insert-directory "~/.emacs.d/insert")
 
 (add-to-list 'auto-insert-alist
              '(("\\.xslt?\\'" . "XSLT template file") . "xslt.template"))

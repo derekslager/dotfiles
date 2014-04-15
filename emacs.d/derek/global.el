@@ -82,6 +82,6 @@
   (menu-bar-mode -1)
   ;; w32
   (when (string-equal system-type "windows-nt")
-    (load (concat uid "/w32"))))
+    (load (concat elisp-root "/w32"))))
 
 (server-start)

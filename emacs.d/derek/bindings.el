@@ -48,6 +48,8 @@
 ;; imenu is useful if it can be invoked quickly
 (global-set-key [(control shift ?o)] 'imenu)
 
+(global-set-key [(control ?c) ? ] 'ace-jump-mode)
+
 (when (package-installed-p 'key-chord)
   (require 'key-chord)
   (key-chord-mode 1)

@@ -23,6 +23,8 @@
     (local-set-key "\C-c\C-b" 'js-send-buffer-and-go)
     (local-set-key "\C-c\C-r" 'js-send-region)
     (local-set-key "\C-cl" 'js-load-file-and-go))
+  (when (fboundp 'prettify-symbols-mode)
+    (setq prettify-symbols-alist '(("function" . ?ƒ))))
   (subword-mode))
 
 (eval-after-load "js2-mode"

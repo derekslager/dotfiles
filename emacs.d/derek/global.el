@@ -64,10 +64,8 @@
 
 (setq compilation-scroll-output t)
 
-(when (package-installed-p 'auto-complete)
-  (require 'auto-complete-config)
-  (setq ac-trigger-key "TAB")
-  (ac-config-default))
+(when (package-installed-p 'company)
+  (add-hook 'after-init-hook 'global-company-mode))
 
 ;; start off find-file in a convenient place
 (cd (expand-file-name "~"))

@@ -13,4 +13,4 @@
 (defun lein-try (lib-name)
   (interactive (list (read-string "What are we going to try today?: " nil 'lein-try-history)))
   (switch-to-buffer (concat "*lein-try-" lib-name "*"))
-  (inferior-lisp (concat "bash lein try " lib-name)))
+  (inferior-lisp (concat "lein try " lib-name)))

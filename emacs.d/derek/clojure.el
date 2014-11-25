@@ -1,12 +1,10 @@
 (defun on-clojure-mode ()
   (require 'paredit)
-  (paredit-mode t))
-
-(eval-after-load "clojure-mode"
-  '(when (package-installed-p 'ac-cider-compliment)
-     (add-hook 'cider-mode-hook 'ac-cider-compliment-setup)))
-
-(eval-after-load "auto-complete"
-  '(add-to-list 'ac-modes 'cider-mode))
+  (paredit-mode t)
+  (when (package-installed-p 'yasnippet)
+    (yas/minor-mode 1))
+  (when (package-installed-p 'clj-refactor)
+    (clj-refactor-mode 1)
+    (cljr-add-keybindings-with-prefix "C-c r")))
 
 (add-hook 'clojure-mode-hook 'on-clojure-mode)

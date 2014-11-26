@@ -1,5 +1,8 @@
 ;; mercurial
 
+(when (package-installed-p 'ahg)
+  (require 'ahg))
+
 (defun hg-pull (&optional arg)
   (interactive "P")
   (shell-command

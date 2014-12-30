@@ -74,8 +74,12 @@
 
 ;; mac os x
 (if (string-equal system-type "darwin")
-    (setq ns-alternate-modifier 'meta
-	  ns-command-modifier 'meta)
+    (progn
+      (setq ns-alternate-modifier 'meta
+            ns-command-modifier 'meta)
+      ;; make homebrew apps available when starting from Dock
+      (add-to-list 'exec-path "/usr/local/bin")
+      (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
   ;; remove menu bar in non-mac os x
   (menu-bar-mode -1)
   ;; w32

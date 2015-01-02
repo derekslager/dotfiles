@@ -8,6 +8,7 @@
          '("package" "theme" "bling" "global" "bindings" "ido" "smex"
            "functions" "programming" "insert"
            "erc" "org"
+           "nxml" "yaml"
            "yasnippet" "csharp" "java" "javascript" "css" "clojure" "hg"))
   (load (concat elisp-root "/" library)))
 

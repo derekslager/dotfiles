@@ -4,6 +4,16 @@
 {% set omz_dir = salt['file.join'](user_dirs.home, '.oh-my-zsh') %}
 {% set zshrc = salt['file.join'](user_dirs.home, '.zshrc') %}
 
+{% set zsh_path = '/usr/local/bin/zsh' if salt['file.file_exists']('/usr/local/bin/zsh') else '/bin/zsh' %}
+
+zsh:
+  pkg.installed
+
+chsh_zsh:
+  user.present:
+    - name: {{ user.username }}
+    - shell: {{ zsh_path }}
+
 https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:
     - target: {{ omz_dir }}

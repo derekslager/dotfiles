@@ -1,29 +1,28 @@
 # Overview
 
-Derek Slager's local configuration files. Currently contain a
-developer-focused Emacs configuration which relies on package.el for
-extended functionality.
+Derek Slager's salted dotfiles repository. Configuration is managed
+via SaltStack, and is intended to work on OS X, Windows and Linux.
+
+# Requirements
+
+SaltStack version 2014.7.0 or newer must be installed. On Mac OS X,
+you will need at least version 2014.7.1. This release is not stable as
+of this writing, but you can run from Homebrew HEAD in the interim:
+
+    $ brew install saltstack --HEAD
+
+You do not need to run `salt-master` or `salt-minion`, this runs
+entirely standalone.
 
 # Installation
 
-Clone the repository locally (the specific location isn't important).
+Clone the repository locally under your `$HOME` directory.
 
-    $ git clone https://github.com/derekslager/dotfiles
+    $ cd; git clone https://github.com/derekslager/dotfiles
 
-Once cloned, use one of the provided scripts to symlink into your home
-directory (move existing files out of the way first). You can also
-selectively symlink specific portions of the configuration. On
-Linux/Mac, use:
+Once cloned, run the following command. Edit `srv/salt/top.sls` to
+select which customizations are applied. To configure states other
+than `emacs`, you will need to create pillar files. These are not
+currently available in the repository.
 
-    $ cd dotfiles
-    $ ./install.rb
-
-On Windows (Vista or better required):
-
-    > cd dotfiles
-    > install.cmd
-
-# Credits
-
-This is largely inspired by Ryan McGeary's organization
-scheme. https://github.com/rmm5t/dotfiles/
+    $ ./highstate.sh

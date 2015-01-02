@@ -1,5 +1,7 @@
 {# directory shortcuts for the primary user #}
 {% set user = pillar['user'] %}
+{% set home = salt['user.info'](user['username']).home %}
 {% set user_dirs = {
-     'home': salt['user.info'](user['username']).home
+     'home': home,
+     'dotfiles': pillar.get('environment.dotfiles', salt['file.join'](home, 'dotfiles'))
    } %}

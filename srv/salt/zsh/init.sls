@@ -4,7 +4,7 @@
 {% set omz_dir = salt['file.join'](user_dirs.home, '.oh-my-zsh') %}
 {% set zshrc = salt['file.join'](user_dirs.home, '.zshrc') %}
 
-git://github.com/robbyrussell/oh-my-zsh.git:
+https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:
     - target: {{ omz_dir }}
     - user: {{ user.username }}

@@ -1,0 +1,10 @@
+{% from "user_dirs.jinja" import user_dirs with context %}
+
+{% set file_name = salt['grains.filter_by']({
+    'Windows': 'Mercurial.ini',
+    '*': '.hgrc'
+}, default='*') %}
+
+{% set hg_config = {
+     'file': salt['file.join'](user_dirs.home, file_name)
+   } %}

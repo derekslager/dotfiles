@@ -1,0 +1,5 @@
+{# directory shortcuts for the primary user #}
+{% set user = pillar['user'] %}
+{% set user_dirs = {
+     'home': salt['user.info'](user['username']).home
+   } %}

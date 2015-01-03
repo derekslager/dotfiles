@@ -1,0 +1,6 @@
+{% set package_names = salt['grains.filter_by']({
+    'Debian': {'ack': 'ack-grep',
+               'ag': 'silversearcher-ag'},
+    'MacOS': {'ack': 'ack',
+              'ag': 'the_silver_searcher'}
+   }) %}

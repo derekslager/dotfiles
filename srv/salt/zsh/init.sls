@@ -9,10 +9,10 @@
 zsh:
   pkg.installed
 
-chsh_zsh:
-  user.present:
-    - name: {{ user.username }}
-    - shell: {{ zsh_path }}
+# chsh_zsh:
+#   user.present:
+#     - name: {{ user.username }}
+#     - shell: {{ zsh_path }}
 
 https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:

@@ -6,3 +6,6 @@ base:
     - git.config
     - zsh
     - package.basics
+  'os:MacOS':
+    - match: grain
+    - osx.defaults

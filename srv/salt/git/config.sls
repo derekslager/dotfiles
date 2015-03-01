@@ -17,3 +17,9 @@ push.default:
     - value: simple
     - user: {{ user.username }}
     - is_global: True
+
+credential.helper:
+  git.config:
+    - value: cache
+    - user: {{ user.username }}
+    - is_global: True

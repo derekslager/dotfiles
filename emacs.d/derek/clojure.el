@@ -1,16 +1,17 @@
-(when (package-installed-p 'clojure-mode)
-  (define-clojure-indent
-    ;; om-tools
-    (defcomponent 'defun)
-    (defcomponentk 'defun)
-    (did-mount 1)
-    (will-unmount 1)
-    (init-state 1)
-    (render 1)
-    (render-state 1)
-    (will-mount 1)
-    (will-receive-props 1)
-    (will-update 1)))
+(eval-after-load 'clojure-mode
+  '(progn
+     (define-clojure-indent
+       ;; om-tools
+       (defcomponent 'defun)
+       (defcomponentk 'defun)
+       (did-mount 1)
+       (will-unmount 1)
+       (init-state 1)
+       (render 1)
+       (render-state 1)
+       (will-mount 1)
+       (will-receive-props 1)
+       (will-update 1))))
 
 (defun on-clojure-mode ()
   (require 'paredit)

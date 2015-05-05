@@ -1,6 +1,9 @@
 (eval-after-load 'clojure-mode
   '(progn
      (define-clojure-indent
+       ;; core.async
+       (go 1)
+       (go-loop 1)
        ;; om-tools
        (defcomponent 'defun)
        (defcomponentk 'defun)

@@ -9,3 +9,6 @@
       ido-file-extensions-order '(".cs" t "")
       ido-ignore-buffers '("\\` ")
       ido-show-dot-for-dired nil)
+
+(when (package-installed-p 'ido-vertical-mode)
+  (ido-vertical-mode))

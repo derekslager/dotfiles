@@ -15,8 +15,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-(setq visible-bell t)
-
 ;; remember where we were
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/places")

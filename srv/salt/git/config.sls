@@ -23,7 +23,7 @@ push.default:
 
 credential.helper:
   git.config:
-    - value: cache
+    - value: store
     - user: {{ user.username }}
     - is_global: True
 

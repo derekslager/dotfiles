@@ -1,4 +1,7 @@
 {% set user = pillar.get('user') %}
+{% from "user_dirs.jinja" import user_dirs with context %}
+
+{% set global_ignore = salt['file.join'](user_dirs.home, '.config') + '/git/ignore' %}
 
 user.name:
   git.config:
@@ -23,3 +26,9 @@ credential.helper:
     - value: cache
     - user: {{ user.username }}
     - is_global: True
+
+{{ global_ignore }}:
+  file.managed:
+    - source: salt://git/.gitignore
+    - user: {{ user.username }}
+    - makedirs: True

@@ -22,7 +22,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
 {{ zshrc }}:
   file.copy:
     - source: {{ salt['file.join'](omz_dir, 'templates', 'zshrc.zsh-template') }}
-    - preserve: True
+    - user: {{ user.username }}
 
 zsh_theme:
   file.replace:

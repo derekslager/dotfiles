@@ -16,9 +16,17 @@
        (will-receive-props 1)
        (will-update 1))))
 
+(defun reloaded-reset (arg)
+  (interactive "P")
+  (save-some-buffers)
+  (cider-interactive-eval "(reloaded.repl/reset)")
+  (when arg
+    (cider-test-run-tests nil)))
+
 (defun on-clojure-mode ()
   (require 'paredit)
   (paredit-mode t)
+  (local-set-key [(control ?c) (shift ?r)] 'reloaded-reset)
   (when (package-installed-p 'yasnippet)
     (yas/minor-mode 1))
   (when (package-installed-p 'clj-refactor)
@@ -26,9 +34,3 @@
     (cljr-add-keybindings-with-prefix "C-c r")))
 
 (add-hook 'clojure-mode-hook 'on-clojure-mode)
-
-(defvar lein-try-history nil)
-(defun lein-try (lib-name)
-  (interactive (list (read-string "What are we going to try today?: " nil 'lein-try-history)))
-  (switch-to-buffer (concat "*lein-try-" lib-name "*"))
-  (inferior-lisp (concat "lein try " lib-name)))

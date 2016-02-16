@@ -23,6 +23,11 @@
   (when arg
     (cider-test-run-tests nil)))
 
+(defun start-figwheel ()
+  (interactive)
+  ;; run this after cider-jack-in-clojurescript
+  (cider-interactive-eval "(use 'figwheel-sidecar.repl-api) (start-figwheel!)"))
+
 (defun on-clojure-mode ()
   (require 'paredit)
   (paredit-mode t)

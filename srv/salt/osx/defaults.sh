@@ -29,3 +29,6 @@ defaults write com.apple.dock wvous-tl-modifier -int 0
 # Bottom left, sleep
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Set mouse tracking to ludicrous speed.
+defaults write -g com.apple.mouse.scaling -float 4.5

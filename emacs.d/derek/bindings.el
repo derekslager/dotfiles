@@ -50,6 +50,8 @@
 
 (global-set-key [(control ?c) ? ] 'ace-jump-mode)
 
+(global-set-key [(control ?x) ?g] 'magit-status)
+
 (when (package-installed-p 'key-chord)
   (require 'key-chord)
   (key-chord-mode 1)

@@ -2,6 +2,12 @@
 
 (when (package-installed-p 'projectile)
   (require 'projectile)
+  ;; prefer project files to repo root
+  (setq projectile-project-root-files-functions
+        '(projectile-root-local
+          projectile-root-top-down
+          projectile-root-bottom-up
+          projectile-root-top-down-recurring))
   (setq projectile-create-missing-test-files t)
   (projectile-global-mode 1))
 

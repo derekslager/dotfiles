@@ -1,5 +1,10 @@
 ;; base functions common to programming modes
 
+(when (package-installed-p 'projectile)
+  (require 'projectile)
+  (setq projectile-create-missing-test-files t)
+  (projectile-global-mode 1))
+
 ;; find project files on load
 (defun find-project-file (regexp)
   (when buffer-file-name

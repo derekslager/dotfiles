@@ -32,8 +32,6 @@
   (require 'paredit)
   (paredit-mode t)
   (local-set-key [(control ?c) (shift ?r)] 'reloaded-reset)
-  (when (package-installed-p 'projectile)
-    (projectile-mode 1))
   (when (package-installed-p 'yasnippet)
     (yas/minor-mode 1))
   (when (package-installed-p 'clj-refactor)

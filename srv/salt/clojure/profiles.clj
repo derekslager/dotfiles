@@ -3,7 +3,7 @@
                   [lein-pprint "1.1.1"]
                   [lein-repo "0.2.1"]
                   [lein-try "0.4.3"]
-                  [cider/cider-nrepl "0.11.0"]
+                  [cider/cider-nrepl "0.12.0"]
                   [refactor-nrepl "2.2.0"]]
         :dependencies [[org.clojure/tools.nrepl "0.2.12"]]}
  :uberjar {:plugins [[lein-repo "0.2.1"]]}}

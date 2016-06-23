@@ -1,9 +1,6 @@
-{:user {:plugins [[jonase/eastwood "0.2.3"]
-                  [lein-ancient "0.6.8"]
-                  [lein-pprint "1.1.1"]
-                  [lein-repo "0.2.1"]
-                  [lein-try "0.4.3"]
-                  [cider/cider-nrepl "0.12.0"]
-                  [refactor-nrepl "2.2.0"]]
-        :dependencies [[org.clojure/tools.nrepl "0.2.12"]]}
- :uberjar {:plugins [[lein-repo "0.2.1"]]}}
+{:user {:plugins [[acyclic/squiggly-clojure "0.1.5"]
+                  [jonase/eastwood "0.2.3"]
+                  [lein-ancient "0.6.10"]
+                  [lein-monolith "0.1.0-SNAPSHOT"]
+                  [lein-pprint "1.1.2"]
+                  [lein-try "0.4.3"]]}}

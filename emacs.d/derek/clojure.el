@@ -39,3 +39,5 @@
     (cljr-add-keybindings-with-prefix "C-c r")))
 
 (add-hook 'clojure-mode-hook 'on-clojure-mode)
+
+(setq cider-inject-dependencies-at-jack-in nil)

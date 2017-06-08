@@ -8,8 +8,6 @@
 
 (eval-after-load "compile"
   '(progn
-     (setq compilation-error-regexp-alist nil)
-
      (setq compilation-error-regexp-alist
 	   (append '(("\\(\\([_a-zA-Z]:\\)?[^:(\t\n]+\\)(\\([0-9]+\\)[,]\\([0-9]+\\)): \\(error\\|warning\\) CS[0-9]+:" 1 3 4))
 		   compilation-error-regexp-alist))

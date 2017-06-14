@@ -1,5 +1,5 @@
 (when (package-installed-p 'yasnippet)
-  ; (setq yas-snippet-dirs "~/.emacs.d/snippets")
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")
 
   (yas-global-mode 1)
   ; (yas-reload-all)

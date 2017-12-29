@@ -28,4 +28,4 @@ zsh_theme:
   file.replace:
     - name: {{ zshrc }}
     - pattern: ZSH_THEME="robbyrussell"
-    - repl: ZSH_THEME="pure"
+    - repl: ZSH_THEME="refined"

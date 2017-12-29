@@ -1,4 +1,5 @@
 (when (package-installed-p 'yasnippet)
+  (require 'yasnippet)
   (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")
 
   (yas-global-mode 1)

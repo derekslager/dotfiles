@@ -4,28 +4,28 @@
 {% set global_ignore = salt['file.join'](user_dirs.home, '.config') + '/git/ignore' %}
 
 user.name:
-  git.config:
+  git.config_set:
     - value: {{ user.fullname }}
     - user: {{ user.username }}
-    - is_global: True
+    - global: True
 
 user.email:
-  git.config:
+  git.config_set:
     - value: {{ user.email }}
     - user: {{ user.username }}
-    - is_global: True
+    - global: True
 
 push.default:
-  git.config:
+  git.config_set:
     - value: simple
     - user: {{ user.username }}
-    - is_global: True
+    - global: True
 
 credential.helper:
-  git.config:
+  git.config_set:
     - value: store
     - user: {{ user.username }}
-    - is_global: True
+    - global: True
 
 {{ global_ignore }}:
   file.managed:

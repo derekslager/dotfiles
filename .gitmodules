@@ -1,0 +1,3 @@
+[submodule "srv/pillar"]
+	path = srv/pillar
+	url = keybase://private/derekslager/dotfiles-pillar

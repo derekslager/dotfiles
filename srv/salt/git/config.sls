@@ -27,6 +27,13 @@ credential.helper:
     - user: {{ user.username }}
     - global: True
 
+# allow keybase prefix for submodules
+protocol.keybase.allow:
+  git.config_set:
+    - value: always
+    - user: {{ user.username }}
+    - global: True
+
 {{ global_ignore }}:
   file.managed:
     - source: salt://git/.gitignore

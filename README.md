@@ -25,4 +25,4 @@ select which customizations are applied. To configure states other
 than `emacs`, you will need to create pillar files. These are not
 currently available in the repository.
 
-    $ ./highstate.sh
+    $ ./state.sh

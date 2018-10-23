@@ -9,7 +9,8 @@
           projectile-root-bottom-up
           projectile-root-top-down-recurring))
   (setq projectile-create-missing-test-files t)
-  (projectile-global-mode 1))
+  (projectile-global-mode 1)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 ;; find project files on load
 (defun find-project-file (regexp)

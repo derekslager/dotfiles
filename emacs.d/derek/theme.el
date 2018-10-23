@@ -8,6 +8,11 @@
 	 (theme (some (lambda (x) (memq x themes)) theme-preferences)))
     (when theme (load-theme (car theme)))))
 
+;; fix theme title text
+(when (and (package-installed-p 'ns-auto-titlebar)
+           (eq system-type 'darwin))
+  (ns-auto-titlebar-mode))
+
 (when (package-installed-p 'company)
   (require 'color)
   (let ((bg (face-attribute 'default :background)))

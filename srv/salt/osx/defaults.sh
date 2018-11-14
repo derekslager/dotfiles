@@ -32,3 +32,17 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Set mouse tracking to ludicrous speed.
 defaults write -g com.apple.mouse.scaling -float 5.5
+
+# Right click is not evil.
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode -string "TwoButton"
+
+# Swipe between pages.
+defaults write -g AppleEnableMouseSwipeNavigateWithScrolls -bool true
+
+# Locale settings.
+defaults write -g AppleICUForce24HourTime -bool true
+defaults write -g AppleTemperatureUnit -string Celsius
+
+# Menu bar customizations.
+# Restart SystemUIServer process for these to activate.
+defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  H:mm:ss"

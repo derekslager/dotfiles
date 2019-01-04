@@ -65,6 +65,9 @@
 (when (package-installed-p 'company)
   (add-hook 'after-init-hook 'global-company-mode))
 
+(when (package-installed-p 'activity-watch-mode)
+  (global-activity-watch-mode))
+
 ;; start off find-file in a convenient place
 (cd (expand-file-name "~"))
 

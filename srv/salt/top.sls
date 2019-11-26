@@ -9,3 +9,4 @@ base:
   'os:MacOS':
     - match: grain
     - osx.defaults
+    - osx.maintenance

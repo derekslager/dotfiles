@@ -26,3 +26,9 @@ than `emacs`, you will need to create pillar files. These are not
 currently available in the repository.
 
     $ ./state.sh
+
+# OS X
+
+If you want the maintenance script to work on Catalina (10.15) and
+presumably above, you'll need to add `/usr/sbin/cron` into `Full Disk
+Access` under `Security & Privacy` > `Privacy`.

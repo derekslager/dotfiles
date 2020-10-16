@@ -31,6 +31,7 @@
 (defun on-clojure-mode ()
   (require 'paredit)
   (paredit-mode t)
+  (eldoc-mode t)
   (local-set-key [(control ?c) (shift ?r)] 'reloaded-reset)
   (when (package-installed-p 'yasnippet)
     (yas/minor-mode 1))
@@ -39,5 +40,8 @@
     (cljr-add-keybindings-with-prefix "C-c r")))
 
 (add-hook 'clojure-mode-hook 'on-clojure-mode)
+
+(add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
+(add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
 
 ; (setq cider-inject-dependencies-at-jack-in nil)

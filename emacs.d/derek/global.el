@@ -63,10 +63,12 @@
 (setq compilation-scroll-output t)
 
 (when (package-installed-p 'company)
+  (global-set-key [(control meta ?i)] #'company-complete)
+  (global-set-key (kbd "M-TAB") #'company-complete)
   (add-hook 'after-init-hook 'global-company-mode))
 
-(when (package-installed-p 'activity-watch-mode)
-  (global-activity-watch-mode))
+;; (when (package-installed-p 'activity-watch-mode)
+;;   (global-activity-watch-mode))
 
 ;; start off find-file in a convenient place
 (cd (expand-file-name "~"))

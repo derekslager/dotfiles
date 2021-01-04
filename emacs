@@ -1,4 +1,4 @@
-(package-initialize)
+;(package-initialize)
 
 (setq uid "derek")
 (setq elisp-root (concat "~/.emacs.d/" uid))

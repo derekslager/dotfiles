@@ -16,7 +16,7 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;; remember where we were
-(setq-default save-place t)
+(setq-default save-place-mode t)
 (setq save-place-file "~/.emacs.d/places")
 (require 'saveplace)
 

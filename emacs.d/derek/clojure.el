@@ -41,7 +41,7 @@
 
 (add-hook 'clojure-mode-hook 'on-clojure-mode)
 
-(add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
-(add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
+;; (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
+;; (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion)
 
 ; (setq cider-inject-dependencies-at-jack-in nil)

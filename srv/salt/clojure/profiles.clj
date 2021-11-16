@@ -1,6 +1,6 @@
 {:user {:plugins [[jonase/eastwood "0.3.11" :exclusions [org.clojure/clojure]]
                   [lein-ancient "0.6.15"]
-                  [lein-monolith "1.5.0"]
+                  [lein-monolith "1.6.1"]
                   [lein-pprint "1.3.2"]
                   [lein-try "0.4.3"]
                   #_[lein-nvd "1.0.0"]

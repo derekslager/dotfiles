@@ -1,15 +1,16 @@
 {% from "user_dirs.jinja" import user_dirs with context %}
 
 {% set user = pillar.get('user') %}
-{% set awext = salt['file.join'](user_dirs.home, 'Downloads') %}
-{% set awhome = salt['file.join'](awext, 'activitywatch') %}
+{% set awext = salt['file.join'](user_dirs.home, 'Applications') %}
+{% set awversion = 'v0.8.3' %}
+{% set awhome = salt['file.join'](awext, 'activitywatch', awversion) %}
 
 # install activitywatch
 download-activitywatch:
   archive.extracted:
-    - source: "https://github.com/ActivityWatch/activitywatch/releases/download/v0.8.0b7/activitywatch-v0.8.0b7-macos-x86_64.zip"
-    - source_hash: "sha1=172ea603eb14dc2ed41cb0da9e25c49534d1987a"
-    - name: {{ awext }}
+    - source: "https://github.com/ActivityWatch/activitywatch/releases/download/{{ awversion }}/activitywatch-{{ awversion }}-macos-x86_64.zip"
+    - source_hash: "sha1=2c75e11a9e204304bdac45498bc440809a1dd341"
+    - name: {{ awhome }}
     - user: {{ user.username }}
 
 run-on-startup:
@@ -19,7 +20,9 @@ run-on-startup:
     - mode: 644
     - template: jinja
     - defaults:
-        awhome: {{ awhome }}
+        awhome: {{ awhome }}/activitywatch
+
+# start once interactively to make sure it's working (./aw-qt from awhome)
 
 # now you can launch:
 # $ launchctl start net.activitywatch.aw-qt

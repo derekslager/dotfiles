@@ -32,3 +32,7 @@ currently available in the repository.
 If you want the maintenance script to work on Catalina (10.15) and
 presumably above, you'll need to add `/usr/sbin/cron` into `Full Disk
 Access` under `Security & Privacy` > `Privacy`.
+
+Modern versions of OS X may also complain about a missing libcrypto
+library. If so, just manually edit `rsax931.py` (location in stack
+trace) with the correct path.

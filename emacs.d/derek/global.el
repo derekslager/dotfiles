@@ -81,8 +81,9 @@
       (setq ns-alternate-modifier 'meta
             ns-command-modifier 'meta)
       ;; make homebrew apps available when starting from Dock
-      (add-to-list 'exec-path "/usr/local/bin")
-      (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH"))))
+      (add-to-list 'exec-path "/usr/local/bin") ; intel
+      (add-to-list 'exec-path "/opt/homebrew/bin") ; ARM
+      (setenv "PATH" (concat "/usr/local/bin:/opt/homebrew/bin:" (getenv "PATH"))))
   ;; remove menu bar in non-mac os x
   (menu-bar-mode -1)
   ;; w32
